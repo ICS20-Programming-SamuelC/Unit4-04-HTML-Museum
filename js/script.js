@@ -8,7 +8,7 @@
 
 
 /**
- * This function displays what type of movie the user can see depending on the age given by the user
+ * This function displays whether or not you get a discount at the museum depending on the input from the user
  */
 function displayAnswer () {
   
@@ -18,29 +18,31 @@ function displayAnswer () {
 	// get user input (age)
 	let age = parseInt(document.getElementById('age').value)
 
+  // get user input (day of the week)
+	let day = parseInt(document.getElementById('day').value)
 
-   // determine the answer based on the users age
+   // determine the answer based on the users age and the day of the week
 
-    if (age > 17) {
+    if (age > 95) || (age <5) {
 
-        answer = "You can see an R rated movie alone."
+        answer = "You get in for free."
 
     }
 
-    else if (age > 13) {
+    else if (age > 11) && (age < 22) {
 
-        answer = "You can see a PG-13 rated movie alone."
+        answer = "You get a discount."
 
     }  
 
-	else if (age > 9) {
+	else if (day == tuesday) || (day == thursday) {
 
-        answer = "You can see a G or PG rated movie alone."
+        answer = "You get a discount."
     }
 
   else {
 
-        answer = "You can't watch a movie alone."
+        answer = "You have to pay full price."
 
     }
 
