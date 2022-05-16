@@ -14,28 +14,30 @@ function displayAnswer () {
   
   	// initialize variables (answer)
 	let answer = ""
-	
-	// get user input (age)
-	let age = parseInt(document.getElementById('age').value)
 
   // get user input (day of the week)
-	let day = parseInt(document.getElementById('day').value)
+  let age = parseInt(document.getElementById('age').value)
+  
+  let select = document.getElementById('day');
+  let day = select.options[select.selectedIndex].value;
 
+
+  
    // determine the answer based on the users age and the day of the week
 
-    if (age > 95) || (age <5) {
+    if ( (age > 95) || (age <5) ) {
 
         answer = "You get in for free."
 
     }
 
-    else if (age > 11) && (age < 22) {
+    else if ( (age > 11) && (age < 22) ) {
 
         answer = "You get a discount."
 
     }  
 
-	else if (day == tuesday) || (day == thursday) {
+	else if ( (day == "tuesday") || (day == "thursday") ) {
 
         answer = "You get a discount."
     }
